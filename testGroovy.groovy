@@ -2,7 +2,7 @@
 node() {
 
 	stage('checkout from Git-repo') {	
-     input 'Do you approve deployment?'	
+     input 'Do you want to continue?'	
 		checkout ([
 		$class: 'GitSCM',
 		branches: [[name: '*/master']],
