@@ -1,7 +1,8 @@
 #!/usr/bin/env groovy
 node() {
-input 'Do you approve deployment?'
-	stage('checkout from Git-repo') {		
+
+	stage('checkout from Git-repo') {	
+     input 'Do you approve deployment?'	
 		checkout ([
 		$class: 'GitSCM',
 		branches: [[name: '*/master']],
