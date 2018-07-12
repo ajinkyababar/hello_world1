@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 node() {
 
-	stage('checkout from Git') {	
+	stage('checkout from Github') {	
      input 'Do you want to continue?'	
 		checkout ([
 		$class: 'GitSCM',
