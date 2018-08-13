@@ -12,10 +12,14 @@ node() {
 		],
 		userRemoteConfigs: [[url: 'https://github.com/ajinkyababar/hello_world1.git']]
 		])
-		env.GIT_COMMIT = scmVars.GIT_COMMIT
+		GIT_COMMIT = scmVars.GIT_COMMIT
 	}
 	
+	sh 'git name-rev --name-only HEAD > GIT_BRANCH'
 	echo "env.GIT_COMMIT"
+	echo ""
+	print 'env.GIT_COMMIT'
+	print "GIT_COMMIT"
 	echo "branch"
 	sh 'echo $BRANCH_NAME'
 	git ls-remote
