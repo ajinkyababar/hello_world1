@@ -21,6 +21,7 @@ node() {
 	print 'env.GIT_COMMIT'
 	print "GIT_COMMIT"
 	echo "branch"
-	sh 'echo $BRANCH_NAME'
-	git ls-remote
+	sh 'git rev-parse HEAD > commit'
+      def commit = readFile('commit').trim()
+	echo 'commit'
 }
