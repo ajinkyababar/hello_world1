@@ -14,14 +14,6 @@ node() {
 		])
 		GIT_COMMIT = scmVars.GIT_COMMIT
 	}
-	
-	sh 'git name-rev --name-only HEAD > GIT_BRANCH'
-	echo "env.GIT_COMMIT"
-	echo GIT_COMMIT
-	print 'env.GIT_COMMIT'
 	print GIT_COMMIT
-	echo "branch"
-	sh 'git rev-parse HEAD > commit'
-      def commit = readFile('commit').trim()
-	echo commit
+      
 }
