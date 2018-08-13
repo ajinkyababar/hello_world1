@@ -19,7 +19,7 @@ node() {
 	
 	stage('checkout from git-2 ') {	
 	def scmVars2 = checkout ([
-		$class: 'GitSCM',
+		$class: 'GitSCMyou',
 		branches: [[name: '*/master']],
 		extensions: [				
 				[$class: 'CleanCheckout']
