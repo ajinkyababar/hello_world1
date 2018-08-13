@@ -17,9 +17,9 @@ node() {
 	}
 	println("First commit Id = "+GIT_COMMIT)
 	
-	stage('checkout from git-2 ') {	
+	stage('checkout from new git project') {	
 	def scmVars2 = checkout ([
-		$class: 'GitSCMyou',
+		$class: 'GitSCM',
 		branches: [[name: '*/master']],
 		extensions: [				
 				[$class: 'CleanCheckout']
