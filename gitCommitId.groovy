@@ -17,6 +17,7 @@ node() {
 	}
 	println("First commit Id = "+GIT_COMMIT)
 	
+	stage('checkout from git-2 ') {	
 	def scmVars2 = checkout ([
 		$class: 'GitSCM',
 		branches: [[name: '*/master']],
@@ -27,8 +28,9 @@ node() {
 		])
 		GIT_COMMIT2 = scmVars2.GIT_COMMIT
 		env.GIT_COMMIT2 = scmVars2.GIT_COMMIT
+	}
 		print GIT_COMMIT2
 		
-	println("Final result = "+env)
+	println("Final result = "+env.GIT_COMMIT2)
       
 }
