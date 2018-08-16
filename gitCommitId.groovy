@@ -3,7 +3,7 @@ node() {
 
 	def branch = env.BRANCH_NAME
 	
-	stage('checkout from git-2') {		
+	stage('checkout from git-3') {		
 	def scmVars = checkout ([
 		$class: 'GitSCM',
 		branches: [[name: '*/master']],
